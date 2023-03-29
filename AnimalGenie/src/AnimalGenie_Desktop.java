@@ -384,8 +384,8 @@ public class AnimalGenie_Desktop extends JFrame implements Serializable {
 		Thread upload = new Thread(new Runnable() {
 			public void run() {
 				/*
-				 * String host = "74.194.202.77"; int port = 2022; String user = "pi"; String
-				 * pass = "123qwe"; String directory ="/var/www/html/game_data/";
+				 * String host = ""; int port = 2022; String user = ""; String
+				 * pass = ""; String directory ="/var/www/html/game_data/";
 				 * 
 				 * Session session = null; Channel channel = null; ChannelSftp channelSftp =
 				 * null;
@@ -407,7 +407,7 @@ public class AnimalGenie_Desktop extends JFrame implements Serializable {
 				ObjectOutputStream obs = null;
 
 				try {
-					smtpSocket = new Socket("74.113.215.53", 2148);
+					smtpSocket = new Socket("", 2148);
 					os = new DataOutputStream(smtpSocket.getOutputStream());
 
 				} catch (SocketException se) {
@@ -448,7 +448,7 @@ public class AnimalGenie_Desktop extends JFrame implements Serializable {
 			public void run() {
 				/*
 				 * try { URL website = new
-				 * URL("http://74.194.202.77:8080/game_data/gameTree.dat");
+				 * URL("http://:8080/game_data/gameTree.dat");
 				 * System.out.println("Requesting game-state transfer from: " +
 				 * website.toString()); FileUtils.copyURLToFile(website, new
 				 * File(gameTreeFile)); //ReadableByteChannel rbc =
@@ -463,7 +463,7 @@ public class AnimalGenie_Desktop extends JFrame implements Serializable {
 				DataOutputStream os = null;
 				ObjectInputStream is = null;
 				try {
-					smtpSocket = new Socket("74.113.215.53", 2148);
+					smtpSocket = new Socket("", 2148);
 					os = new DataOutputStream(smtpSocket.getOutputStream());
 				} catch (UnknownHostException e) {
 					System.err.println("Don't know about host: hostname");
